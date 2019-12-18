@@ -1,0 +1,24 @@
+server:
+  port: 8881
+
+spring:
+  application:
+    name: gassman-gateway-service
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8880/eureka
+zuul:
+  host:
+    connect-timeout-millis: 15000
+    socket-timeout-millis: 15000
+  ignored-services: '*'
+  routes:
+    gassman-order:
+      path: /gassman/**
+      serviceId: gassman-order-service
+      stripPrefix : true
