@@ -18,7 +18,12 @@ zuul:
     socket-timeout-millis: 15000
   ignored-services: '*'
   routes:
-    gassman-order:
-      path: /gassman/**
+    gassman-order-service:
+      path: /gassman-order-service/**
       serviceId: gassman-order-service
       stripPrefix : true
+    gassman-admin:
+      path: /gassman-admin/**
+      serviceId: gassman-admin
+      stripPrefix: true
+      sensitiveHeaders: Authorization
