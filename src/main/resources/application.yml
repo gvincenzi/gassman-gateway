@@ -22,8 +22,27 @@ zuul:
       path: /gassman-order-service/**
       serviceId: gassman-order-service
       stripPrefix : true
+    gassman-payment-service:
+      path: /gassman-payment-service/**
+      serviceId: gassman-payment-service
+      stripPrefix: true
     gassman-admin:
       path: /gassman-admin/**
       serviceId: gassman-admin
       stripPrefix: true
       sensitiveHeaders: Authorization
+
+hystrix:
+  command:
+    default:
+      execution:
+        iso lation:
+          thread:
+            timeoutInMilliseconds: 30000
+
+
+ribbon:
+  ReadTimeout: 60000
+  connection-timeout: 3000
+  eureka:
+    enabled: true
