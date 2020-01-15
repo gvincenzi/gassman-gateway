@@ -36,13 +36,13 @@ hystrix:
   command:
     default:
       execution:
-        iso lation:
+        isolation:
           thread:
-            timeoutInMilliseconds: 30000
+            timeoutInMilliseconds: 32000
 
 
 ribbon:
-  ReadTimeout: 60000
-  connection-timeout: 3000
+  ReadTimeout: 15000
+  connection-timeout: 15000
   eureka:
     enabled: true
