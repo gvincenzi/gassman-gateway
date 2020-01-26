@@ -22,15 +22,12 @@ zuul:
       path: /gassman-order-service/**
       serviceId: gassman-order-service
       stripPrefix : true
+      sensitiveHeaders:
     gassman-payment-service:
       path: /gassman-payment-service/**
       serviceId: gassman-payment-service
       stripPrefix: true
-    gassman-admin:
-      path: /gassman-admin/**
-      serviceId: gassman-admin
-      stripPrefix: true
-      sensitiveHeaders: Authorization
+      sensitiveHeaders:
 
 hystrix:
   command:
