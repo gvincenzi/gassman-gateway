@@ -10,7 +10,7 @@
     </parent>
     <groupId>org.gassman</groupId>
     <artifactId>gassman-gateway</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>gassman-gateway</name>
     <description>GasSMan Gateway</description>
     <packaging>jar</packaging>
